@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: enderitemod
+Specification-Vendor: PianoManu
+Specification-Version: 1
+Implementation-Title: Minecraft-Enderite-Mod-Forge
+Implementation-Version: 1.16.1-0.5.3-forge-32.0.98
+Implementation-Vendor: PianoManu
+Implementation-Timestamp: 2020-08-16T13:06:05+0200
+MixinConfigs: enderitemod.mixins.json
+

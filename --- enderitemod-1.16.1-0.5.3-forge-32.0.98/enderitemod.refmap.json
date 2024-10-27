@@ -1,0 +1,60 @@
+{
+  "mappings": {
+    "net/enderitemc/enderitemod/mixin/EnderiteRespawnAnchorMixin": {
+      "func_234567_a_": "Lnet/minecraft/entity/player/PlayerEntity;func_234567_a_(Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;ZZ)Ljava/util/Optional;"
+    },
+    "net/enderitemc/enderitemod/mixin/ElytraLivingEntityMixin": {
+      "updateElytra": "Lnet/minecraft/entity/LivingEntity;func_184616_r()V",
+      "Lnet/minecraft/entity/LivingEntity;setFlag(IZ)V": "Lnet/minecraft/entity/LivingEntity;func_70052_a(IZ)V"
+    },
+    "net/enderitemc/enderitemod/mixin/SmithingEnderiteSwordMixin": {
+      "updateRepairOutput": "Lnet/minecraft/inventory/container/SmithingTableContainer;func_82848_d()V",
+      "func_230301_a_": "Lnet/minecraft/inventory/container/SmithingTableContainer;func_230301_a_(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;",
+      "func_230303_b_": "Lnet/minecraft/inventory/container/SmithingTableContainer;func_230303_b_(Lnet/minecraft/entity/player/PlayerEntity;Z)Z"
+    },
+    "net/enderitemc/enderitemod/mixin/ElytraClientPlayerEntityMixin": {
+      "Lnet/minecraft/client/entity/player/ClientPlayerEntity;getItemStackFromSlot(Lnet/minecraft/inventory/EquipmentSlotType;)Lnet/minecraft/item/ItemStack;": "Lnet/minecraft/client/entity/player/ClientPlayerEntity;func_184582_a(Lnet/minecraft/inventory/EquipmentSlotType;)Lnet/minecraft/item/ItemStack;",
+      "livingTick": "Lnet/minecraft/client/entity/player/ClientPlayerEntity;func_70636_d()V"
+    },
+    "net/enderitemc/enderitemod/mixin/ElytraFeatureRendererMixin": {
+      "render": "Lnet/minecraft/client/renderer/entity/layers/ElytraLayer;func_225628_a_(Lcom/mojang/blaze3d/matrix/MatrixStack;Lnet/minecraft/client/renderer/IRenderTypeBuffer;ILnet/minecraft/entity/LivingEntity;FFFFFF)V"
+    },
+    "net/enderitemc/enderitemod/mixin/ElytraPlayerEntityMixin": {
+      "Lnet/minecraft/entity/player/PlayerEntity;getItemStackFromSlot(Lnet/minecraft/inventory/EquipmentSlotType;)Lnet/minecraft/item/ItemStack;": "Lnet/minecraft/entity/player/PlayerEntity;func_184582_a(Lnet/minecraft/inventory/EquipmentSlotType;)Lnet/minecraft/item/ItemStack;",
+      "tryToStartFallFlying": "Lnet/minecraft/entity/player/PlayerEntity;func_226566_ei_()Z"
+    },
+    "net/enderitemc/enderitemod/mixin/EnderiteDropVoidMixin": {
+      "tick": "Lnet/minecraft/entity/item/ItemEntity;func_70071_h_()V"
+    }
+  },
+  "data": {
+    "searge": {
+      "net/enderitemc/enderitemod/mixin/EnderiteRespawnAnchorMixin": {
+        "func_234567_a_": "Lnet/minecraft/entity/player/PlayerEntity;func_234567_a_(Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;ZZ)Ljava/util/Optional;"
+      },
+      "net/enderitemc/enderitemod/mixin/ElytraLivingEntityMixin": {
+        "updateElytra": "Lnet/minecraft/entity/LivingEntity;func_184616_r()V",
+        "Lnet/minecraft/entity/LivingEntity;setFlag(IZ)V": "Lnet/minecraft/entity/LivingEntity;func_70052_a(IZ)V"
+      },
+      "net/enderitemc/enderitemod/mixin/SmithingEnderiteSwordMixin": {
+        "updateRepairOutput": "Lnet/minecraft/inventory/container/SmithingTableContainer;func_82848_d()V",
+        "func_230301_a_": "Lnet/minecraft/inventory/container/SmithingTableContainer;func_230301_a_(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;",
+        "func_230303_b_": "Lnet/minecraft/inventory/container/SmithingTableContainer;func_230303_b_(Lnet/minecraft/entity/player/PlayerEntity;Z)Z"
+      },
+      "net/enderitemc/enderitemod/mixin/ElytraClientPlayerEntityMixin": {
+        "Lnet/minecraft/client/entity/player/ClientPlayerEntity;getItemStackFromSlot(Lnet/minecraft/inventory/EquipmentSlotType;)Lnet/minecraft/item/ItemStack;": "Lnet/minecraft/client/entity/player/ClientPlayerEntity;func_184582_a(Lnet/minecraft/inventory/EquipmentSlotType;)Lnet/minecraft/item/ItemStack;",
+        "livingTick": "Lnet/minecraft/client/entity/player/ClientPlayerEntity;func_70636_d()V"
+      },
+      "net/enderitemc/enderitemod/mixin/ElytraFeatureRendererMixin": {
+        "render": "Lnet/minecraft/client/renderer/entity/layers/ElytraLayer;func_225628_a_(Lcom/mojang/blaze3d/matrix/MatrixStack;Lnet/minecraft/client/renderer/IRenderTypeBuffer;ILnet/minecraft/entity/LivingEntity;FFFFFF)V"
+      },
+      "net/enderitemc/enderitemod/mixin/ElytraPlayerEntityMixin": {
+        "Lnet/minecraft/entity/player/PlayerEntity;getItemStackFromSlot(Lnet/minecraft/inventory/EquipmentSlotType;)Lnet/minecraft/item/ItemStack;": "Lnet/minecraft/entity/player/PlayerEntity;func_184582_a(Lnet/minecraft/inventory/EquipmentSlotType;)Lnet/minecraft/item/ItemStack;",
+        "tryToStartFallFlying": "Lnet/minecraft/entity/player/PlayerEntity;func_226566_ei_()Z"
+      },
+      "net/enderitemc/enderitemod/mixin/EnderiteDropVoidMixin": {
+        "tick": "Lnet/minecraft/entity/item/ItemEntity;func_70071_h_()V"
+      }
+    }
+  }
+}
