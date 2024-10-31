@@ -1,5 +1,6 @@
 package network.manu.manumod;
 
+import net.minecraft.util.ResourceLocation;
 import org.ejml.data.Complex64F;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -41,6 +42,10 @@ public class ManuMod {
     public static final String MODNAME = "ManuMod";
     public static Logger log = LogManager.getLogger(MODID);
 
+    public static ResourceLocation getResource(String name) {
+        return new ResourceLocation(ManuMod.MODID, name);
+    }
+
     public static String TEXTURE_PREFIX = MODID + ":";
 
     public static Item.ToolMaterial enderiteToolMaterial;
@@ -61,6 +66,7 @@ public class ManuMod {
     public static Item itemEnderiteArmorChestplate;
     public static Item itemEnderitearmorLeggings;
     public static Item itemEnderiteAxe;
+    public static Item itemEnderitePickaxe;
     public static Item itemEnderiteHoe;
     public static Item itemEnderiteArmorBoots;
     public static Item itemArmorTrimSmithingTemplateSentry;
@@ -123,14 +129,15 @@ public class ManuMod {
             EnumHelper.addArmorMaterial(
                 "Composite_Armor",
                 39,
-                new int[]{2, 7, 5, 2},
-                9
+                new int[]{3, 7, 6, 3},
+                7
             );
 
         itemEnderiteIngot = new ItemEnderiteIngot();
         itemEnderiteScrap = new ItemEnderiteScrap();
         itemEnderiteSword = new ItemEnderiteSword(enderiteToolMaterial);
         itemEnderiteAxe = new ItemEnderiteAxe(enderiteToolMaterial);
+        itemEnderitePickaxe = new ItemEnderitePickaxe(enderiteToolMaterial);
         itemEnderiteHoe = new ItemEnderiteHoe(enderiteToolMaterial);
         itemEnderiteShovel = new ItemEnderiteShovel(enderiteToolMaterial);
         itemEnderiteArmorHelmet = new ItemEnderiteArmorHelmet(enderiteArmorMaterial);
@@ -163,6 +170,7 @@ public class ManuMod {
         GameRegistry.registerItem(itemEnderiteScrap, ItemEnderiteScrap.ID);
         GameRegistry.registerItem(itemEnderiteSword, ItemEnderiteSword.ID);
         GameRegistry.registerItem(itemEnderiteAxe, ItemEnderiteAxe.ID);
+        GameRegistry.registerItem(itemEnderitePickaxe, ItemEnderitePickaxe.ID);
         GameRegistry.registerItem(itemEnderiteHoe, ItemEnderiteHoe.ID);
         GameRegistry.registerItem(itemEnderiteShovel, ItemEnderiteShovel.ID);
         GameRegistry.registerItem(itemEnderiteArmorHelmet, ItemEnderiteArmorHelmet.ID);
@@ -199,12 +207,6 @@ public class ManuMod {
         GameRegistry.registerBlock(blockEnderite, BlockEnderite.ID);
         GameRegistry.registerBlock(blockEnderiteDebris, BlockEnderiteDebris.ID);
         GameRegistry.registerWorldGenerator(enderiteDebrisWorldGenerator, 100);
-
-        GameRegistry.addSmelting(
-            new ItemStack(blockEnderiteDebrisCracked),
-            new ItemStack(itemEnderiteScrap),
-            2.0F
-        );
     }
 
     @Mod.EventHandler
@@ -224,6 +226,12 @@ public class ManuMod {
         proxy.postInit(event);
 
         MinecraftForge.EVENT_BUS.register(new EventBusEventHandler());
+
+        GameRegistry.addSmelting(
+            new ItemStack(blockEnderiteDebrisCracked),
+            new ItemStack(itemEnderiteScrap),
+            2.0F
+        );
 
         itemPartAlloy = GameRegistry.findItem("IC2", "itemPartAlloy");
     }
